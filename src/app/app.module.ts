@@ -10,8 +10,8 @@ import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { StudentModule } from './student/student.module';
 import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
-import { ParametersComponent } from './parameters/parameters.component';
+// import { LoginComponent } from './login/login.component';
+// import { ParametersComponent } from './parameters/parameters.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,7 @@ import { ParametersComponent } from './parameters/parameters.component';
     // StudentListComponent,
     TeacherListComponent,
     TestComponent,
-    LoginComponent,
-    ParametersComponent
+    // LoginComponent,
   ],
   imports:[
     BrowserModule,
