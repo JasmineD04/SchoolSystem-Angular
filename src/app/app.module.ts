@@ -9,7 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { StudentModule } from './student/student.module';
 import { TestComponent } from './test/test.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { LoginComponent } from './login/login.component';
 // import { ParametersComponent } from './parameters/parameters.component';
 
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     // StudentListComponent,
     TeacherListComponent,
     TestComponent,
+    ReactiveFormComponent,
     // LoginComponent,
   ],
   imports:[
@@ -27,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     NgbModule,
     StudentModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
