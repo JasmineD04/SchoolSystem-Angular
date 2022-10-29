@@ -1,0 +1,32 @@
+body{
+    padding: 30px;
+    background: url(https://img.freepik.com/free-vector/low-poly-white-background-design_1017-33204.jpg?w=2000);
+ }
+
+.form{
+    text-align:center;
+    padding: 9px;
+    margin: 4px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    
+}
+.form input{
+    padding: 8px;
+}
+
+#submit:hover{
+    color: azure;
+}
+header{
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+

@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TeacherListComponent } from './teacher-list/teacher-list.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    AuthenticationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
