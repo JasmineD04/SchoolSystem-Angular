@@ -6,15 +6,18 @@ import { SidenavComponent } from './shared/component/sidenav/sidenav.component';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentListComponent } from './student-list/student-list.component';
-import { TeacherListComponent } from './teacher-list/teacher-list.component';
+// import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { HomeModule } from './home/home.module';
+import { TeacherModule } from './teacher/teacher.module';
+import { ParentModule } from './parent/parent.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
-    TeacherListComponent,
+    // TeacherListComponent,
   ],
   imports:[
     BrowserModule,
@@ -22,7 +25,9 @@ import { HomeModule } from './home/home.module';
     SharedModule,
     NgbModule,
     AuthenticationModule,
-    HomeModule
+    HomeModule,
+    TeacherModule,
+    ParentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

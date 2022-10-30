@@ -14,7 +14,7 @@ export class ParentLoginComponent implements OnInit {
   }
 
   redirect():void{
-    this.router.navigate(["dashboard"])
+    this.router.navigate(["dashboard/parent"])
   }
 
   signIn():void{

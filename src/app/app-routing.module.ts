@@ -6,20 +6,23 @@ import { ParentSignupComponent } from './authentication/parent-signup/parent-sig
 import { TeacherSignupComponent } from './authentication/teacher-signup/teacher-signup.component';
 import { AboutComponent } from './home/about/about.component';
 import { RoleComponent } from './home/role/role.component';
+import { ParentDashboardComponent } from './parent/parent-dashboard/parent-dashboard.component';
 import { SidenavComponent } from './shared/component/sidenav/sidenav.component';
 import { StudentListComponent } from './student-list/student-list.component';
-import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { TeacherDashboardComponent } from './teacher/teacher-dashboard/teacher-dashboard.component';
+
 
 const routes: Routes = [
   {path:'choose',component:RoleComponent},
   {path:'login',component:LoginComponent},
   {path:'about',component:AboutComponent},
+  {path:'sidenav',component:SidenavComponent},
   {path:'parentlogin',component:ParentLoginComponent},
   {path:'teachersign',component:TeacherSignupComponent},
   {path:'parentsign',component:ParentSignupComponent},
-  {path:'dashboard',component:SidenavComponent},
-  {path:'students',component:StudentListComponent},
-  {path:'teachers',component:TeacherListComponent}];
+  {path:'dashboard/parent',component:ParentDashboardComponent},
+  {path:'dashboard/teacher',component:TeacherDashboardComponent},
+  {path:'students',component:StudentListComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

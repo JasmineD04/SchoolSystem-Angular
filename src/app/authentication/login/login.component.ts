@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
 
   redirect():void{
-    this.router.navigate(["dashboard"])
+    this.router.navigate(["dashboard/teacher"])
   }
 
   signIn():void{
