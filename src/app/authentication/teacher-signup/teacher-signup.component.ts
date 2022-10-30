@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-teacher-signup',
+  templateUrl: './teacher-signup.component.html',
+  styleUrls: ['./teacher-signup.component.css']
 })
-export class LoginComponent implements OnInit {
+export class TeacherSignupComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  
   ngOnInit(): void {
   }
 
@@ -18,7 +17,4 @@ export class LoginComponent implements OnInit {
     this.router.navigate(["dashboard"])
   }
 
-  signIn():void{
-    this.router.navigate(["teachersign"])
-  }
 }

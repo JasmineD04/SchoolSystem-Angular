@@ -8,19 +8,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
-    TeacherListComponent
+    TeacherListComponent,
   ],
   imports:[
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     NgbModule,
-    AuthenticationModule
+    AuthenticationModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

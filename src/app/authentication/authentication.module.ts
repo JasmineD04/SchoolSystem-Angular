@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { ParentLoginComponent } from './parent-login/parent-login.component';
+import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
+import { ParentSignupComponent } from './parent-signup/parent-signup.component';
 
 
 
@@ -11,7 +13,9 @@ import { ParentLoginComponent } from './parent-login/parent-login.component';
 @NgModule({
   declarations: [
     LoginComponent,
-    ParentLoginComponent
+    ParentLoginComponent,
+    TeacherSignupComponent,
+    ParentSignupComponent
   ],
   imports:[
     CommonModule,
@@ -20,6 +24,10 @@ import { ParentLoginComponent } from './parent-login/parent-login.component';
   ],
   exports:[
     LoginComponent,
+    ParentLoginComponent,
+    TeacherSignupComponent,
+    ParentSignupComponent,
+
     
   ]
 })
