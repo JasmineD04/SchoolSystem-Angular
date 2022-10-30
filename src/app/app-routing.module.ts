@@ -8,7 +8,6 @@ import { AboutComponent } from './home/about/about.component';
 import { RoleComponent } from './home/role/role.component';
 import { ParentDashboardComponent } from './parent/parent-dashboard/parent-dashboard.component';
 import { SidenavComponent } from './shared/component/sidenav/sidenav.component';
-import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherDashboardComponent } from './teacher/teacher-dashboard/teacher-dashboard.component';
 
 
@@ -21,8 +20,7 @@ const routes: Routes = [
   {path:'teachersign',component:TeacherSignupComponent},
   {path:'parentsign',component:ParentSignupComponent},
   {path:'dashboard/parent',component:ParentDashboardComponent},
-  {path:'dashboard/teacher',component:TeacherDashboardComponent},
-  {path:'students',component:StudentListComponent}];
+  {path:'dashboard/teacher',component:TeacherDashboardComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
