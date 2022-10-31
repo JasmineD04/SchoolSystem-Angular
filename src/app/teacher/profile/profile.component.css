@@ -1,0 +1,48 @@
+body{
+    height:100%;
+    background: lightblue;
+    align-items: center;
+    padding-bottom: 100px;
+    margin-top: 20px;
+}
+.card{
+    overflow: hidden;
+    margin-top: 50px;
+    border: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    width: 2000px; 
+}
+hr{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: blue;
+}
+
+p{
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 20px;
+}
+
+h6{
+    font-weight:lighter;
+    color: dimgray;
+    margin-left: 20px;
+}
+h3{
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+#line{
+    width: 100%;
+    color: blue;
+}
+
+h5{
+    font-weight: normal;
+    color: dimgray;
+    margin-left: 20px;
+}

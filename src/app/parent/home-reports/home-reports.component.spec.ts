@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { HomeReportsComponent } from './home-reports.component';
+
+describe('HomeReportsComponent', () => {
+  let component: HomeReportsComponent;
+  let fixture: ComponentFixture<HomeReportsComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ HomeReportsComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(HomeReportsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,0 +1,36 @@
+body{
+    background-color: lightblue !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.card-body{
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px !important;
+}
+
+#parent{
+    margin-left: 130px;
+    width: 470px;
+}
+
+#teacher{
+    width: 470px;
+}
+
+#pie, #academics{
+    margin-left: 130px;
+}
+
+img{
+    /* /margin-top: 30px;/ */
+    /* /margin-left: 20px;/ */
+    border-radius: 10px;
+    margin: 0px;
+    /* /margin-right: 20px; */
+    width: 470px;
+    height: 300px;
+}

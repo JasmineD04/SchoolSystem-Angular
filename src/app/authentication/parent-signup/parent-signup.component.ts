@@ -14,7 +14,7 @@ export class ParentSignupComponent implements OnInit {
   }
 
   redirect():void{
-    this.router.navigate(["dashboard"])
+    this.router.navigate(["dashboard/parent"])
   }
 
 }

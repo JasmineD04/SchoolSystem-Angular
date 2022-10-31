@@ -1,40 +1,41 @@
+<body>
+    <div class="container">
+        <div class="row px-3">
+            <div class="col-lg-8 col-xl-8 card flex-row mx-auto px-0">
+                <div class="card-body">
+                    <h1 class="title text-center mt-4">
+                        Choose Your Role
+                    </h1>
+                    <form class="form-box px-3">
 
-        <div class="container">
-            <div class="row px-3">
-                <div class="col-lg-8 col-xl-8 card flex-row mx-auto px-0">
-                    <div class="card-body">
-                        <h1 class="title text-center mt-4">
-                            Choose Your Role
-                        </h1>
-                        <form class="form-box px-3">
+                        <div class="text-center mb-3">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="../../../../assets/images/prole.jpeg" class="rounded-circle" alt="teacher">
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="../../../../assets/images/trole.jpeg" class="rounded-circle" alt="parent">
+                                </div>
+                            </div>
+                        </div>
 
-                            <div class="text-center mb-3">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <img src="img.jpg" class="rounded-circle" alt="teacher">
+                        <div class="text-center mb-3">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="text-center mb-3">
+                                        <button (click)="tlogIn()" type="submit" class="btn btn-block text-uppercase" >teacher</button>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <img src="img.jpg" class="rounded-circle" alt="parent">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="text-center mb-3">
+                                        <button (click)="plogIn()" type="submit" class="btn btn-block text-uppercase" >parent</button>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="text-center mb-3">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="text-center mb-3">
-                                            <button (click)="redirect()" type="submit" class="btn btn-block text-uppercase" >teacher</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="text-center mb-3">
-                                            <button (click)="redirect()" type="submit" class="btn btn-block text-uppercase" >parent</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+</body>

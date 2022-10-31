@@ -1,0 +1,146 @@
+<app-teacher-dashboard></app-teacher-dashboard>
+<section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+          <div class="row pt-md-5 mt-md-3 mb-5">
+            <div class="col-xl-3 col-sm-6 p-2">
+              <div class="card card-common">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <fa-icon [icon]="icons.studentIcon" class="text-dark fa-3x"></fa-icon>
+                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                    <div class="text-right text-secondary">
+                        
+                      <h5>Students</h5>
+                      <h3>50055</h3>
+                    </div>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 p-2">
+              <div class="card card-common">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <fa-icon [icon]="icons.awardIcon" class="text-dark fa-3x"></fa-icon>
+                    <i class="fas fa-money-bill-alt fa-3x text-success"></i>
+                    <div class="text-right text-secondary">
+                      <h5>Awards</h5>
+                      <h3>100+</h3>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 p-2">
+              <div class="card card-common">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <fa-icon [icon]="icons.departmentIcon" class="text-dark fa-3x"></fa-icon>
+                    <i class="fas fa-users fa-3x text-info"></i>
+                    <div class="text-right text-secondary">
+                      <h5>Departments</h5>
+                      <h3>15,000</h3>
+                    </div>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 p-2">
+              <div class="card card-common">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <fa-icon [icon]="icons.revenueIcon" class="text-dark fa-3x"></fa-icon>
+                    <i class="fas fa-chart-line fa-3x text-danger"></i>
+                    <div class="text-right text-secondary">
+                      <h5>Revenue</h5>
+                      <h3>$505</h3>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of cards -->
+
+
+  <!-- tables -->
+  <section>
+    <div class="container-fluid">
+      <div class="row mb-5">
+        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+          <div class="row align-items-center">
+            <div class="col-xl-12 col-12 mb-4 mb-xl-0">
+              <h3 class="text-muted text-center mb-3">Staff Salary</h3>
+              <table class="table table-striped bg-light text-center">
+                <thead>
+                  <tr class="text-muted">
+                    <th>Id</th>
+                    <th>First_Name</th>
+                    <th>Last_name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let student of data;let looper=index">
+                    <td>{{looper+1}}</td> 
+                    <td><a href="/parameters">{{student.first_name}}</a></td>
+                    <td>{{student.last_name}}</td>
+                    <td>{{student.email}}</td>
+                    <td>{{student.gender}}</td>
+                    <td>{{student.contact}}</td>
+                </tr>
+                </tbody>
+              </table>
+
+              <!-- pagination -->
+              <nav>
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a href="#" class="page-link py-2 px-3">
+                      1
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      2
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      3
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link py-2 px-3">
+                      <span>&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- end of pagination -->
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of tables -->

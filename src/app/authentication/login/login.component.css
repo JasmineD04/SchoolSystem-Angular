@@ -16,7 +16,7 @@ body{
 }
 .img-left{
     width: 45%;
-    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mmm-online.com%2Fhome%2Fchannel%2Fsponsored%2Fthe-evolution-of-marketing-to-parents-improving-representation%2F&psig=AOvVaw2qFipH4WosJiS3-UOlZ654&ust=1667156171511000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCNDi7ouPhvsCFQAAAAAdAAAAABAI') center;
+    background: url('/assets/images/tlogin.jpeg') center;
     background-size: cover;
 }
 

@@ -16,7 +16,8 @@ body{
 }
 .img-left{
     width: 45%;
-    /* background:url('./plogin.jpg') center; */
+    background: url('/assets/images/plogin.jpeg') center;
+    /* background:url('') center; */
     background-size: cover;
 }
 

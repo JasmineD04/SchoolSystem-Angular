@@ -1,0 +1,16 @@
+body{
+  font-family: 'PT Serif', serif;
+}
+.jumbotron {
+  background-color: rgb(125, 205, 232);
+  color: #fff;
+  padding: 100px 25px;
+  font-family: Montserrat, sans-serif;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+.bg-grey {
+  background-color: #f6f6f6;
+}

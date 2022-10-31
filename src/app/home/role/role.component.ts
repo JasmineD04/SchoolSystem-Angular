@@ -17,4 +17,12 @@ export class RoleComponent implements OnInit {
     this.router.navigate(["dashboard/teacher"])
   }
 
+  tlogIn():void{
+    this.router.navigate(["login"])
+  }
+  plogIn():void{
+    this.router.navigate(["parentlogin"])
+  }
+
+
 }
