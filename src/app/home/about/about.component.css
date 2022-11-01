@@ -1,3 +1,16 @@
 .container-fluid{
     background-color: #A3C7D6;
+    font-family: Montserrat, sans-serif;
+    /* height:100%; */
 }
+
+.carousel-item{
+  height:30rem;
+  background:#777;
+  color:white;
+  background-position: center;
+  background-size: contain;
+}
+/* .container{
+  background-color: white;
+} */

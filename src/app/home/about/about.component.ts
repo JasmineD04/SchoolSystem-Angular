@@ -13,6 +13,8 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // images = [trole, 1011, 984]
+
   redirect():void{
     this.router.navigate(["choose"])
   }

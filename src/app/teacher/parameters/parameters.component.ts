@@ -15,7 +15,7 @@ export class ParametersComponent implements OnInit {
   }
 
   redirect():void{
-    this.router.navigate(["reportview"])
+    this.router.navigate(["record"])
   }
 
 }

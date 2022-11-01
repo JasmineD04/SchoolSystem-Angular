@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { faEnvelope, faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-parent-signup',
@@ -9,6 +10,12 @@ import { Router } from '@angular/router';
 export class ParentSignupComponent implements OnInit {
 
   constructor(private router: Router) { }
+
+  icons={
+    userIcon:faUser,
+    envelopeIcon:faEnvelope,
+    keyIcon:faKey
+  }
 
   ngOnInit(): void {
   }
