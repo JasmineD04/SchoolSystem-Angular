@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class InformationComponent implements OnInit {
 
   constructor() { }
+  images=[
+    "assets/images/cr1.jpg",
+    "assets/images/cr2.jpg",
+    "assets/images/cr3.jpg",
+  ]
 
   ngOnInit(): void {
   }

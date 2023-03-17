@@ -1,144 +1,54 @@
-<!-- <p>parameters works!</p> -->
 <app-teacher-dashboard></app-teacher-dashboard>
-
-    <div class="container-fluid">
-      <div class="row mb-5">
-        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto mt-5">
-          <div class="row align-items-center">
-            <div class="col-xl-12 col-12 mb-4 mb-xl-0">
-              
-                <table class="table table-striped bg-light">
-                    <thead>
-                        <tr> 
-                            <td>Parameters</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                    </thead>
-                        <tr>
-                            <td>Shows interest in understanding new concepts</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="interests">
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>Likes to learn new things</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="newThings">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Participates in project work activities</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="participation">
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Likes to attend school</td>
-                            <td *ngFor="let val of values">
-                                    <input type="radio" [value]="val" name="attendsSchool">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Does Home-Work with interest</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="homeWork">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Asks various questions</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="questions">
-                            </td>
-    
-                        </tr>
-                        <tr>
-                            <td>Does her studies on her own</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="studies">
-                            </td>
-
-                        </tr>
-                    <tbody>
-        
-                    </tbody>
-                </table>
-                <table class="table table-striped bg-light">
-                    <thead>
-                        <tr> 
-                            <td>Parameters</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                    </thead>
-                        <tr>
-                            <td>While working in a group he/she tries to understand views of his/her companions</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="companions">
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>Without any discrimination mixes with everyone</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="discrimination">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Tries to maintain cleanliness in the class and premises</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="cleanliness">
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Helps friends in need</td>
-                            <td *ngFor="let val of values">
-                                    <input type="radio" [value]="val" name="helpful">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Behaves humbly with others</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="humble">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Understands the emotions of others and joins them in sorrow and happiness</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="emotions">
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Follows rules and regulations in school</td>
-                            <td *ngFor="let val of values">
-                                <input type="radio" [value]="val" name="rules">
-                            </td>
-
-                        </tr>
-                    <tbody>
-        
-                    </tbody>
-                </table>
-                <div>
-                    <button (click)="redirect()">Submit</button>
-                </div>
+<div class="container-fluid" >
+  <div class="row mb-5">
+    <div class="col-xl-10 col-lg-9 col-md-8 ms-auto mt-5" >
+      <div class="row align-items-center"  >
+        <div class="col-xl-12 col-12 mb-4 mb-xl-0" >
+          <ngb-accordion #acc="ngbAccordion" *ngFor="let category of categories" >
+              <ngb-panel class="fw-bolder" type="danger" title="{{category.CategoryName}}">
+                  <ng-template ngbPanelContent>
+                    <table class="table table-striped bg-light">
+                      <thead>
+                          <tr> 
+                            <td><h4>PARAMETERS</h4></td>
+                          </tr>
+                      </thead>
+                    </table>
+                    <!-- <hr> -->
+                      <div  *ngFor="let obj of object">
+                        <div *ngIf="obj.CategoryID==category.CategoryID">
+                          <!-- <p>{{obj?.ParameterName}}</p> -->
+                          <table>
+                            <tr>
+                              <td class="pe-5">{{obj.ParameterName}}</td>
+                              <br>
+                              <br>
+                              <td ><input class="ms-5" type="radio" name="{{obj.ParameterID}}" value="1" (click)="setData(obj.CategoryID,this.rollNo,1)">1</td>
+                              <td><input class="ms-5" type="radio" name="{{obj.ParameterID}}" value="2" (click)="setData(obj.CategoryID,this.rollNo,2)">2</td>
+                              <td><input class="ms-5" type="radio" name="{{obj.ParameterID}}" value="3" (click)="setData(obj.CategoryID,this.rollNo,3)">3</td>
+                              <td><input class="ms-5" type="radio" name="{{obj.ParameterID}}" value="4" (click)="setData(obj.CategoryID,this.rollNo,4)">4</td>
+                              <td><input class="ms-5" type="radio" name="{{obj.ParameterID}}" value="5" (click)="setData(obj.CategoryID,this.rollNo,5)">5</td>
+                            </tr>
+                              <!-- <tr scope="row">{{obj?.ParameterName}}<td><input type="radio" name="{{obj.ParameterID}}" value="1" (click)="updateValues(obj.ParameterID,1)">1</td></tr>
+                              <td>
+                              <td><input type="radio" name="{{obj.ParameterID}}" value="2" (click)="updateValues(obj.ParameterID,2)">2</td>
+                              <td><input type="radio" name="{{obj.ParameterID}}" value="3" (click)="updateValues(obj.ParameterID,3)">3</td>
+                              <td><input type="radio" name="{{obj.ParameterID}}" value="4" (click)="updateValues(obj.ParameterID,4)">4</td>
+                              <td><input type="radio" name="{{obj.ParameterID}}" value="5" (click)="updateValues(obj.ParameterID,4)">5</td> -->
+                          </table>
+                          
+                        </div> 
+                      </div>
+                  </ng-template>
+              </ngb-panel>
+          </ngb-accordion>
+          <div>
+            <button class="btn "type="submit" (click)="submitForm()">SUBMIT</button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 </div>
-
-  <!-- end of tables -->
-<body>
-        <div>
-            
-        </div>
-        
-    </body>
+                    
+                

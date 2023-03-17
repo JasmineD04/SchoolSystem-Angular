@@ -11,6 +11,11 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  images=[
+    "assets/images/cr1.jpg",
+    "assets/images/cr2.jpg",
+    "assets/images/cr3.jpg",
+  ]
 
   
 

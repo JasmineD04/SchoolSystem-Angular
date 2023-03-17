@@ -1,59 +1,47 @@
 <body>
-    <div class="container">
-        <div class="row px-3">
-            <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
-                <div class="img-left d-none d-md-flex"></div>
-                <div class="card-body">
-                    <h4 class="title text-center mt-4">
-                        Parent Login
-                    </h4>
-                    <form class="form-box px-3">
-                        <div class="form-input">
-                            <!-- <label for="StudentName">Student's Name</label> -->
-                            <!-- <span><i class="fa fa-user"></i></span> -->
-                            <span><fa-icon [icon]="icons.userIcon"></fa-icon></span>
-                            <!-- <i class="fa fa-user"></i> -->
-                            <input type="text" name="StudentName" placeholder="StudentName" tabindex="10" required>
-                        </div>
-                        <div class="form-input">
-                            <!-- <span><i class="fa fa-envelope"></i></span> -->
-                            <span><fa-icon [icon]="icons.envelopeIcon"></fa-icon></span>
-                            <input type="email" name="" placeholder="Email Address" tabindex="10" required>
-                        </div>
-                        <div class="form-input">
-                            <!-- <span><i class="fa fa-key"></i></span> -->
-                            <span><fa-icon [icon]="icons.keyIcon"></fa-icon></span>
-                            <input type="password" name="" placeholder="Password" required>
-                        </div>
-                        <div class="mb-3">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cb1" name="">
-                                <label class="custom-control-label" for="cb1">Remember me</label>
-                            </div>
-                        </div>
-
-                        <div class="text-center mb-3">
-                            <button type="submit" class="btn btn-block text-uppercase" (click)="redirect()" >LOGIN</button>
-                        </div>
-
-                        <div class="text-right">
-                            <a href="#" class="forget-link">Forgot Password?</a>
-                        </div>
-
-                    
-
-                        <hr class="my-4">
-                        <div class="text-center mb-2">
-                            Don't have an account?
-                            <a (click)="signIn()" class="register-link">
-                                Register here
-                            </a>
-                        </div>
-
-                    </form>
+	<img class="wave" src="assets/images/wave4.png">
+	<div class="container">
+		<div class="img">
+			<img src="assets/images/person-removebg-preview.png">
+		</div>
+		<div class="login-content">
+			<form [formGroup]="parentLogin"  (ngSubmit)="submitForm()">
+				<img src="assets/images/avatar.svg">
+				<h2 class="title">Welcome</h2>
+                <div class="input-div one">
+                    <div class="i">
+                            <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                  <input type="text" name="" placeholder="Student Name" tabindex="10" required>
+                    </div>
+                 </div>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+                    <input type="text" formControlName="userName" name="" placeholder="Email Address OR UserName" tabindex="10" required>
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+                    <input type="password" formControlName="password" name="" placeholder="Password" required>
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<button type="submit" class="btn btn-block text-uppercase" (click)="submitForm()" >LOGIN</button>
+                <div class="text-center mb-2">
+                    Don't have an account?
+                    <a (click)="signIn()" class="register-link">
+                        Register here!
+                    </a>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
-       

@@ -1,41 +1,41 @@
 <body>
-    <div class="container">
-        <div class="row px-3">
-            <div class="col-lg-8 col-xl-8 card flex-row mx-auto px-0">
-                <div class="card-body">
-                    <h1 class="title text-center mt-4">
-                        Choose Your Role
-                    </h1>
-                    <form class="form-box px-3">
-
-                        <div class="text-center mb-3">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <img src="../../../../assets/images/prole.jpeg" class="rounded-circle" alt="teacher">
-                                </div>
-                                <div class="col-lg-6">
-                                    <img src="../../../../assets/images/trole.jpeg" class="rounded-circle" alt="parent">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center mb-3">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="text-center mb-3">
-                                        <button (click)="tlogIn()" type="submit" class="btn btn-block text-uppercase" >teacher</button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="text-center mb-3">
-                                        <button (click)="plogIn()" type="submit" class="btn btn-block text-uppercase" >parent</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+    <section>
+      <div class="row">
+        <h1>Choose Your Role</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+            <!-- Column 1-->
+            <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="assets/images/teacher_1512060.jpg" />
+                    </div>
+                    <h2>Teacher</h2>
+                    <p>Re-shape lives</p>
+                    <button type="button" (click)="tlogIn()" class="btn btn-primary">
+                        <h5>SELECT</h5>
+                    </button>
+                    
                 </div>
             </div>
+            <!-- Column 2-->
+            
+            <!-- Column 3-->
+            <div class="column" id = "parent">
+            <div class="card">
+                <div class="img-container">
+                    <img src="assets/images/parent (1).jpg" />
+                </div>
+                <h2>Parent</h2>
+                <p>Build lives</p>
+                <button type="button" (click)="plogIn()" class="btn btn-primary">
+                    <h5>SELECT</h5>
+                </button>
+                
+            </div>
+            </div>
         </div>
-    </div>
-</body>
+      </div>
+    </section>
+  </body>

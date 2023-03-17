@@ -1,34 +1,411 @@
-<!-- <p>about works!</p> -->
+<div class="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero-sec">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about']" fragment="team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about']" fragment="testi" >Testimonials</a>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]="['/about']" fragment="featured" href="#featured">Featured</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  </div>
+  
+  <div class="hero-container" id="hero-sec">
+    <div class="container-fluid ">
+    <div class="row d-flex">
+      <div class="col align-middle">
+        <div class="px-2 py-2">
+        <img src="https://img.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg?w=900&t=st=1667037491~exp=1667038091~hmac=7c71ea8afc8f3cc8065c5ccc05d105e3c8a7b76f0133016cb210a7882dc19611" class="img-fluid" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="px-5 py-5 mt-5">
+          <div class="px-2 py-2 align-middle">
+          <h4>360 Degree Performance Analysis</h4>
+          <p>This system is developed to predict student academic performance in courses offered by the organization through analyzing the students’ performance using data analytics techniques 
+          </p>
+          </div>
+          <div class="px-2 py-2">
+            <button type="button" (click)="redirect()"class="btn btn-outline-primary">View More</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <!-- main container -->
+  <div class="main-container">
+    <div class="container-fluid">
+    ...
+  </div>
+  </div>
+  
+  <!--  Card container  -->
+  <div class="card-container bg-black" id="team">
+    <div class="container-fluid px-3 py-3">
+      <div class="row center mx-4 my-4 text-white">
+        <h2>Meet Our Team</h2>
+      </div>
+      <div class="row mb-5">
+        <div class="col ">
+          <div class="card teamInfo" >
+    <img src="https://img.freepik.com/free-vector/work-time-concept-illustration_114360-1074.jpg" class="card-img-top" style="height:300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Jasmine Dhirwani</h5>
+      <p class="card-text">A professional web developer with a wealth of knowledge about the web Development.</p>
+      <a href="#" class="btn org-btn">Go somewhere</a>
+    </div>
+  </div>
+        </div>
+             <div class="col">
+          <div class="card teamInfo" >
+    <img src="data:image/png;base64,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" class="card-img-top" style="height:300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Sakshi Bhojwani</h5>
+      <p class="card-text">A professional frontend web developer with a wealth of knowledge about the web Development.</p>
+      <a href="#" class="btn org-btn">Go somewhere</a>
+    </div>
+  </div>
+        </div>
+        <div class="col">
+          <div class="card teamInfo" >
+    <img src="https://img.freepik.com/free-vector/work-time-concept-illustration_114360-1474.jpg?w=740&t=st=1667038053~exp=1667038653~hmac=7f51a4d7c9f7dc9e0e3a6d53d45f381fc455e5424bcc36a0bedca65db24487e7" class="card-img-top" style="height:300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tithi Jhamnani</h5>
+      <p class="card-text">A professional graphic designer with a wealth of knowledge about design by code.
 
-    <section class="container-fluid " style="height:100vh">
-        <div class="row  justify-content-center text-center align-items-center style=" style="height:100vh">
-            <div class="col-md-10">
-                <h2 class="display-2 text-capitalize">
-                    <span class="text-dark">360 Performance Analysis System</span>
-                </h2>
-                <p>The 360 Degree performance analysis system will act as a bridge between the teachers and the parents. This system will allow the teachers to fill the data of the students in an orderly manner and generate a performance analysis report on the basis of the data entered which will not consume time unlike the current system where the teachers have to manually enter the data. The parents will be able to view their child's reports and also edit them according to their traits in their homes. The parents will be well aware about their child's behavior in school and can monitor them accordingly. This system will help the universities to function in a more systematic manner by decreasing manual labor and decreased paperwork.The reports generated by our system will provide an insight of the students’ performance and personality traits in school and their homes ,which will help them in the near future. This system will ensure that the feedback entered by the teachers is not offensive and will not hurt the sentiments of the students and parents</p>
+      </p>
+      <a href="#" class="btn org-btn">Go somewhere</a>
+    </div>
+  </div>
+        </div>
+        <div class="col teamInfo">
+          <div class="card" >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoVCWKp8yC1t4eCrcmK0gVbwY8S1kzTygTew&usqp=CAU" class="card-img-top" style="height:300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Nishtha Batra</h5>
+      <p class="card-text">A professional QA engineers who designs and executes tests during the whole development process.  </p>
+      <a href="#" class="btn org-btn">Go somewhere</a>
+    </div>
+  </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  
+  
+  <!-- <div class="aside-container">
+    <div class="container-fluid">
+   <aside>
+  <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+  </aside>
+  </div>
+  </div> -->
+    
+    
+    <!--  testimonals container  -->
+  <div class="testimonals-container mt-4 mb-4" id="testi">
+    <div class="container-fluid">
+      <div class="row center mx-4 my-4">
+        <h2>What People Say </h2>
+      </div>
+    <div >
+    <!-- <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div> -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+  <!--       <img src="..." class="d-block w-100" alt="..."> -->
+        <div class="card-group">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTrvX8HKxyFN0yeJEaXOKQ8e4M2u_c4JX71IuV9dfXDTtbdhQsK2VXtC8vTYqOmK7fRBI&usqp=CAU" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Parents</h5>
+        <p class="card-text">This website help us keep a track on our child daily progress.The ui is great and interactive.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/mysterious-mafia-man-wearing-hat_52683-34829.jpg?w=740&t=st=1667039801~exp=1667040401~hmac=6b629c58ba7d8377cd74454b010b48bc920e6cb96e6fc6f3733135b8f180519f" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Teachers</h5>
+        <p class="card-text">With the use of this website the manual work has reduced and the student analysis has become way easier.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1667039591~exp=1667040191~hmac=3996cb3fe0c2a92d83dfa4986a6da0e62212cabb97397aab04c8f50f771b7f90" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Students</h5>
+        <p class="card-text">This website shows our daily progress which motivates and help us to improve ourself.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="carousel-item">
+  <!--       <img src="..." class="d-block w-100" alt="..."> -->
+        <div class="card-group">
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/mysterious-mafia-man-wearing-hat_52683-34829.jpg?w=740&t=st=1667039801~exp=1667040401~hmac=6b629c58ba7d8377cd74454b010b48bc920e6cb96e6fc6f3733135b8f180519f" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1667039591~exp=1667040191~hmac=3996cb3fe0c2a92d83dfa4986a6da0e62212cabb97397aab04c8f50f771b7f90" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?w=740&t=st=1667039664~exp=1667040264~hmac=ad7a2beb239191b6f7cf1cb1d1e5f0012768ad0be36cc1b0ad2c461274601ff0" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="carousel-item">
+  <!--       <img src="..." class="d-block w-100" alt="..."> -->
+        <div class="card-group">
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/mysterious-mafia-man-wearing-hat_52683-34829.jpg?w=740&t=st=1667039801~exp=1667040401~hmac=6b629c58ba7d8377cd74454b010b48bc920e6cb96e6fc6f3733135b8f180519f" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?w=740&t=st=1667039664~exp=1667040264~hmac=ad7a2beb239191b6f7cf1cb1d1e5f0012768ad0be36cc1b0ad2c461274601ff0" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1667039591~exp=1667040191~hmac=3996cb3fe0c2a92d83dfa4986a6da0e62212cabb97397aab04c8f50f771b7f90" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+  </div>
+  
+  <!-- overlay box -->
+  <!--   <div class="mt-5 mx-1">
+    <div class="card bg-black text-white ">
+    <div class="card-body px-4 py-4">
+      
+      </div>
+     </div>
+    </div> -->
+    
+  <!--  banner container  -->
+  <div class="banner-container mt-5 mb-5" id="featured">
+    <div class="container-fluid px-4 py-4">
+    <div class="card bg-black text-white shadow-lg " style="height: 45vh;">
+    <h5 class="card-header">Features</h5>
+    <div class="card-body">
+  <!--     <h5 class="card-title">Special Teachers for Students</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn org-btn center">Learn More</a> -->
+      <div class="conatiner">
+      <div class="row d-flex justify-content-around">
+        <div class="col">
+           <div class="card text-black move-up mb-3 box" >
+    <div class="card-header">Overall Analysis</div>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Front End + Backend</h5> -->
+      <p class="card-text">To develop a system for students’ performance analysis.
+      </p>
+  <!--     <a href="#" class="btn btn-outline-primary center">View our curriculum</a> -->
+    </div>
+  </div>
+        </div>
+        <div class="col">
+          <div class="card text-black move-up mb-3 box" >
+    <div class="card-header">Assisting Teachers</div>
+    <div class="card-body">
+      <!-- <h5 class="card-title"></h5> -->
+      <p class="card-text"> To assist the teachers in analyzing and predicting student performance in academic.
+  </p>
+    </div>
+  </div>
+        </div>
+        <div class="col">
+          <div class="card text-black move-up mb-3 box" >
+    <div class="card-header">Identify Potholes</div>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Begineer Course</h5> -->
+      <p class="card-text">To identify the factors that affect the students progress.</p>
+    </div>
+  </div>
+        </div>
+          <div class="col">
+          <div class="card text-black move-up mb-3 box" >
+    <div class="card-header">Tracking Progress </div>
+    <div class="card-body">
+      <!-- <h5 class="card-title">Python AI</h5> -->
+      <p class="card-text"> To assist lecturers in keeping track of the students’ progress throughout the year.</p>
+    </div>
+  </div>
+        </div>
+     
+  
+  
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <!-- footer -->
+  <div class="footer-container foot">
+    <div class="container-fluid">
+    <footer>
+      <div class="">
+        <div class="row">
+        <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                <span class="footer-title">Product</span>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Product 1</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Product 2</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Plans & Prices</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Frequently asked questions</a>
+                </li>
+            </ul>
+            </div>
+            <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                <span class="footer-title">Company</span>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Job postings</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">News and articles</a>
+                </li>
+            </ul>
+            </div>
+            <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                <span class="footer-title">Contact & Support</span>
+                </li>
+                <li class="nav-item">
+                <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-star"></i>Give feedback</a>
+                </li>
+            </ul>
             </div>
         </div>
-    </section>
-    <div class="row text-center justify-content-center p-5">
-
-        <div class="col-md-4 col-10">
-            <i class="fa fa-desktop fa-6x text-warning pb-3"></i>
-            <h1 class="text-secondary">User-Friendly</h1>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, consequatur.</p>
-        </div>  
-        <div class="col-md-4 col-10">
-            <i class="far fa-edit fa-6x text-warning pb-3"></i>
-            <h1 class="text-secondary">Upscale</h1>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, consequatur.</p>
+  
+      <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
+      
+      <div class="row text-center">
+        <div class="col-md-4 box">
+          <span class="copyright quick-links">Copyright &copy; Your Website <script>document.write(new Date().getFullYear())</script>
+          </span>
         </div>
-        <div class="col-md-4 col-10">
-            <i class="fa fa-cogs fa-6x text-warning pb-3"></i>
-            <h1 class="text-secondary">Exclusive</h1>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, consequatur.</p>
+        <div class="col-md-4 box">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            </li>
+          </ul>
         </div>
-        <div>
-            <button (click)="redirect()">Next</button>
+        <div class="col-md-4 box">
+          <ul class="list-inline quick-links">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
         </div>
-</div>
-
+      </div>
+    </div>
+    </footer>  
+  </div>
+  </div>

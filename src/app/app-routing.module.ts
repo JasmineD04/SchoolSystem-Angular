@@ -33,8 +33,8 @@ const routes: Routes = [
   {path:'dashboard/teacher',component:TeacherDashboardComponent},
   {path:'view',component:ViewComponent},
   {path:'studentslist',component:StudentListComponent},
-  {path:'parameters',component:ParametersComponent},
-  {path:'record',component:RecordViewComponent},
+  {path:'parameters/:rollNo',component:ParametersComponent},
+  {path:'record/:rollNo',component:RecordViewComponent},
   {path:'teacherprofile',component:ProfileComponent},
   {path:'homereports',component:HomeReportsComponent},
   {path:'schoolinfo',component:InformationComponent},
@@ -43,7 +43,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{anchorScrolling: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { 

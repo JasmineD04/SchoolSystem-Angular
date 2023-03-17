@@ -1,85 +1,88 @@
-
-    <body>
-        <div class="container">
-            <div class="row px-3">
-                <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
-                    <div class="card-body">
-                        <h4 class="title text-center mt-4">
-                            Parent Sign Up
-                        </h4>
-                        <form class="form-box px-3">
-                                <div class="text-center mb-3">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-input">
-                                                <span><fa-icon [icon]="icons.userIcon"></fa-icon></span>
-                                                <input type="name" name="" placeholder="First Name" tabindex="10" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="form-input">
-                                                <span><fa-icon [icon]="icons.userIcon"></fa-icon></span>
-                                                <input type="name" name="" placeholder="Last Name" tabindex="10" required>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                <div class="form-input">
-                                    <span><fa-icon [icon]="icons.envelopeIcon"></fa-icon></span>
-                                    <input type="email" name="" placeholder="Email Address" tabindex="10" required>
-                                </div>
-
-                                <div class="form-input">
-                                    <span><fa-icon [icon]="icons.userIcon"></fa-icon></span>
-                                    <input type="name" name="" placeholder="Division" tabindex="10" required>
-                                </div>
-
-                                <div class="form-input">
-                                    <span><fa-icon [icon]="icons.userIcon"></fa-icon></span>
-                                    <input type="text" name="" placeholder="Roll Number" tabindex="10" required>
-                                </div>
-
-                                
-                                <div class="row mb-3">
-                                    <div class="col-4">
-                                        <label for="">Gender:</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                            Male
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                            Female
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-input">
-                                    Enter Password: 
-                                    <span><fa-icon [icon]="icons.keyIcon"></fa-icon></span>
-                                    <input type="password" name="" placeholder="Enter Password" required>
-                                </div>
-                                <div class="form-input">
-                                    Confirm Password: 
-                                    <span><fa-icon [icon]="icons.keyIcon"></fa-icon></span>
-                                    <input type="password" name="" placeholder="Confirm Password" required>
-                                </div>
-
-                                <div class="text-center mb-3">
-                                    <button (click)="redirect()" type="submit" class="btn btn-block text-uppercase" >SUBMIT</button>
-                                </div>
-
-                            </div>
-                        </form>
+<body>
+  <div class="container">
+      <div class="row px-3"style="padding:30px">
+          <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+              <div class="img-left d-none d-md-flex">
+                <div class="col-6 " style="padding: 100px;">
+                  <figure><img src="assets/images/sign-up-bg.jpeg.jpg" alt="sing up image" style="padding-top: 40px;"></figure>
+                          
+              </div>
+              </div>
+              <div class="card-body">
+                <h4 class="title text-center mt-4" style="font-size: 30px;">
+                  Parent Sign Up
+              </h4>
+              
+                  <form [formGroup]="parentSignUp"  (ngSubmit)="submitForm()">
+                    
+                      <div class="form-input">
+                          <!-- <span><fa-icon [icon]="icons.userIcon"></fa-icon></span> -->
+                          <!-- <label for="floatingInput" style="font-size: 15px;"> Name:</label> -->
+                          <input type="text"  placeholder="First Name" formControlName="firstName" required>
+                      </div>
+                      <div class="form-input">
+                        <!-- <span><fa-icon [icon]="icons.userIcon"></fa-icon></span> -->
+                        <!-- <label for="floatingInput" style="font-size: 15px;"> Lastname:</label> -->
+                        <input type="text" placeholder="Last Name" formControlName="lastName" required="">
                     </div>
+                    <div class="form-input">
+                      <!-- <span><fa-icon [icon]="icons.userIcon"></fa-icon></span> -->
+                      <!-- <label for="floatingInput" style="font-size: 15px;"> Username:</label> -->
+                      <input type="text" placeholder="UserName" formControlName="userName" required="">
+                  </div>
+                      <div class="form-input">
+                        <!-- <label for="floatingInput" style="font-size: 15px;"> Email Address:</label> -->
+                          <input type="email" name="" placeholder="Email Address" tabindex="10" required>
+                      </div>
+                      <div class="form-input">
+                        <!-- <label for="floatingInput" style="font-size: 15px;"> Class:</label> -->
+                        <input type="name" name="" placeholder="Class" tabindex="10" formControlName="division">
+                    </div>
+                    <div class="form-input">
+                      <input type="name" name="" placeholder="Division" tabindex="10" formControlName="division">
+                  </div>
+                  <div class="form-input">
+                    <input type="text" name="" placeholder="Roll Number" tabindex="10" formControlName="rollNo">
                 </div>
-            </div>
-        </div>
+                  <div>
+                    <label for="floatingInput" style="font-size: 15px;"> Gender:</label>
+                    <div class="row mb-3">
+                      <div class="form-check" >
+                          
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          <input type="radio" formControlName="gender" value="male" name="gender" id="flexRadioDefault1">
+                        Male
+                        </label> 
+                      </div>
+                      <div class="form-check">
+                            
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          <input type="radio" value="female" name="gender" id="flexRadioDefault2">
+                        Female
+                        </label>
+                       
+                    </div>
+                  </div>
+                </div>
+                      <div class="form-input">
+                          <!-- <span><i class="fa fa-key"></i></span> -->
+                          <!-- <label for="floatingInput" style="font-size: 15px;"> Password:</label> -->
+                          <!-- <span><fa-icon [icon]="icons.keyIcon"></fa-icon></span> -->
+                          <input type="password" name="" placeholder="Password" required>
+                      </div>
+                      <div class="form-input">
+                        <!-- <span><i class="fa fa-key"></i></span> -->
+                        <!-- <label for="floatingInput" style="font-size: 15px;">Confirm Password:</label> -->
+                        <!-- <span><fa-icon [icon]="icons.keyIcon"></fa-icon></span> -->
+                        <input type="password" name="" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="text-center mb-3">
+                      <button class="btn" type="submit" class="btn btn-block text-uppercase" (click)="submitForm()">SUBMIT</button>
+                  </div>
+
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>

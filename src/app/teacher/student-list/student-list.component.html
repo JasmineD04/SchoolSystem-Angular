@@ -80,8 +80,8 @@
         <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
           <div class="row align-items-center">
             <div class="col-xl-12 col-12 mb-4 mb-xl-0">
-              <h3 class="text-muted text-center mb-3">Staff Salary</h3>
-              <table class="table table-striped bg-light text-center">
+              <h3 class="text-muted text-center mb-3">STUDENTS</h3>
+              <table class="table table-striped text-center bg-light">
                 <thead>
                   <tr class="text-muted">
                     <th>Id</th>
@@ -93,13 +93,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let student of data;let looper=index">
-                    <td>{{looper+1}}</td> 
-                    <td><a href="/parameters">{{student.first_name}}</a></td>
-                    <td>{{student.last_name}}</td>
-                    <td>{{student.email}}</td>
-                    <td>{{student.gender}}</td>
-                    <td>{{student.contact}}</td>
+                  <tr *ngFor="let student of studentsData;let looper=index">
+                    <td><button class="btn bg-light">{{looper+1}}</button></td> 
+                    <td><button class="btn bg-light" (click)="parameters(student.RollNo)">{{student.FirstName}}</button></td>
+                    <td><button class="btn bg-light">{{student.LastName}}</button></td>
+                    <td><button class="btn bg-light">{{student.Email}}</button></td>
+                    <td><button class="btn bg-light">{{student.Gender}}</button></td>
+                    <td><button class="btn bg-light">{{student.Contact}}</button></td>
                 </tr>
                 </tbody>
               </table>
